@@ -7,6 +7,6 @@ router.put("/", UserController.update);
 router.get("/", UserController.getAll);
 router.get("/users/:id", UserController.getById)
 router.delete("/:id", UserController.deleteById)
-router.get("/userorders/:id", UserController.getUserOrders)
+router.get("/userorders", UserController.getUserOrders)
 
 module.exports = router;

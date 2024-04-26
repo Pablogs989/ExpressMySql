@@ -39,7 +39,7 @@ const UserController = {
         });
     },
     getUserOrders(req, res) {
-        let sql = `SELECT * FROM orders INNER JOIN users ON orders.user_id = ${req.params.id}`;
+        let sql = `SELECT users.id, users.first_name, users.last_name, users.phone, orders.id AS order_id, orders.fecha FROM ecommerce.users INNER JOIN ecommerce.orders ON users.id = orders.user_id;`;
         db.query(sql, (err, result) => {
             if (err) throw err;
             res.send(result);
