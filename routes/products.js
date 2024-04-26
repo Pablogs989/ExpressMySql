@@ -9,6 +9,6 @@ router.get("/productcategory", ProductController.getProductCategory);
 router.get("/product/:id", ProductController.getById)
 router.get("/iddesc", ProductController.getByIdDesc)
 router.get("/productname/:name", ProductController.getByName)
-router.get("/productdelete/:id", ProductController.deleteById)
+router.delete("/productdelete/:id", ProductController.deleteById)
 
 module.exports = router;
